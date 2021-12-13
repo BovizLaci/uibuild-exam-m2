@@ -61,17 +61,17 @@ body {
     }
     
     div.container {
-			position: absolute;
-			display: flex;
-			width: 100vw;
-      padding: 20px;
-				border-style: solid;
-        top: 50%;
+		position: absolute;
+		display: flex;
+		width: 100vw;
+		max-width: 520px;
+      	padding: 20px;
+
+		top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         
         flex-direction: column;
-        // justify-content: center;
         gap: 30px;
     }
     
@@ -87,10 +87,6 @@ body {
 			h1 {
 				font-size: 48px;
 			}
-
-			div.container {
-				width: 520px;
-			}
 		}
 		
 		@media only screen and (min-width: 768px) {
@@ -101,6 +97,7 @@ body {
 		
 		div.input {
 			margin: 0 20px;
+			display: flex;
 		}
 		
 		input {
@@ -120,21 +117,14 @@ body {
 				margin: 0 20px;
 			}
 			
-			label {
-				display: inline;
-				margin-left: 10px;
-			}
-			
 			input::placedolder {
 				color: #138073;
     }
 
     input[type=checkbox] {
-			display: inline;
-        vertical-align: middle;
         width: 20px;
         height: 20px;
-				margin: 0;
+				margin: 0 10px 0 0;
 			}
 			
 			button {
