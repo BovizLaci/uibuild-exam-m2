@@ -83,7 +83,7 @@ body div.container {
   gap: 30px;
 }
 
-body h1 {
+body div.container h1 {
   font-size: 36px;
   font-weight: 500;
   font-family: 'EB Garamond', serif;
@@ -92,25 +92,18 @@ body h1 {
 }
 
 @media only screen and (min-width: 520px) {
-  body h1 {
+  body div.container h1 {
     font-size: 48px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  body h1 {
+  body div.container h1 {
     text-align: center;
   }
 }
 
-body div.input {
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body input {
+body div.container input {
   display: block;
   height: 64px;
   padding: 0 20px;
@@ -118,7 +111,7 @@ body input {
   margin: 0 20px;
 }
 
-body textarea {
+body div.container textarea {
   display: block;
   height: 120px;
   padding: 20px;
@@ -127,17 +120,24 @@ body textarea {
   margin: 0 20px;
 }
 
-body input::placedolder {
+body div.container input::placedolder {
   color: #138073;
 }
 
-body input[type=checkbox] {
+body div.container div.checkbox {
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body div.container div.checkbox input {
   width: 20px;
   height: 20px;
   margin: 0 10px 0 0;
 }
 
-body button {
+body div.container button {
   margin-top: 30px;
   width: 280px;
   height: 80px;
@@ -155,7 +155,7 @@ body button {
 }
 
 @media only screen and (max-width: 320px) {
-  body button {
+  body div.container button {
     width: 90vw;
   }
 }
