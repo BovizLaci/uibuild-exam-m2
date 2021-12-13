@@ -46,4 +46,118 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* Resert finished */
+
+/* reset */
+
+body {
+    font-weight: 500;
+    background-color: #f7e4d7;
+    
+    * {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #467745;
+        
+    }
+    
+    div.container {
+			position: absolute;
+			display: flex;
+			width: 100vw;
+      padding: 200px;
+				border-style: solid;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+		h1 {
+			font-size: 36px;
+			font-weight: 500;
+			font-family: 'EB Garamond', serif;
+			text-align: left;
+			margin: 0 20px;
+    }
+    
+		@media only screen and (min-width: 520px) {
+			h1 {
+				font-size: 48px;
+			}
+
+			div#container {
+				width: 520px;
+			}
+		}
+		
+		@media only screen and (min-width: 768px) {
+			h1 {
+				text-align: center;
+			}
+		}
+		
+		div.input {
+			margin: 0 20px;
+		}
+		
+		input {
+			display: block;
+			height: 64px;
+        padding: 0 20px;
+        border-style: none;
+				margin: 0 20px;
+			}
+			
+			textarea {
+				display: block;
+				height: 120px;
+				padding: 20px;
+				border-style: none;
+				resize: none;
+				margin: 0 20px;
+			}
+			
+			label {
+				display: inline;
+				margin-left: 10px;
+			}
+			
+			input::placedolder {
+				color: #138073;
+    }
+
+    input[type=checkbox] {
+			display: inline;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+				margin: 0;
+			}
+			
+			button {
+				margin-top: 30px;
+				width: 280px;
+				height: 80px;
+				
+				background-color: #467745;
+        color: #f7e4d7;
+				
+				font-family: 'EB Garamond', serif;
+				font-size: 21px;
+        text-transform: uppercase;
+				letter-spacing: 0.2em;
+				
+				border-style: none;
+				border-radius: 40px;
+        align-self: center;
+			}
+
+			@media only screen and (max-width: 320px) {
+					button {
+						width: 90vw;
+					}
+				}
+}

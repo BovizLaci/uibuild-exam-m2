@@ -1,49 +1,172 @@
-/*** The new CSS Reset - version 1.4.2 (last updated 30.11.2021) ***/
-/*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
- */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
-/* Remove list styles (bullets/numbers) */
-ol, ul, menu {
+body {
+  line-height: 1;
+}
+
+ol, ul {
   list-style: none;
 }
 
-/* For images to not be able to exceed their container */
-img {
-  max-width: 100%;
+blockquote, q {
+  quotes: none;
 }
 
-/* removes spacing between cells in tables */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
 table {
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-  white-space: revert;
+/* reset */
+body {
+  font-weight: 500;
+  background-color: #f7e4d7;
 }
 
-/* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly. */
-:where([contenteditable]) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-  -webkit-line-break: after-white-space;
+body * {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #467745;
 }
 
-/* Resert finished */
+body div.container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  padding: 200px;
+  border-style: solid;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+body h1 {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: 'EB Garamond', serif;
+  text-align: left;
+  margin: 0 20px;
+}
+
+@media only screen and (min-width: 520px) {
+  body h1 {
+    font-size: 48px;
+  }
+  body div#container {
+    width: 520px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body h1 {
+    text-align: center;
+  }
+}
+
+body div.input {
+  margin: 0 20px;
+}
+
+body input {
+  display: block;
+  height: 64px;
+  padding: 0 20px;
+  border-style: none;
+  margin: 0 20px;
+}
+
+body textarea {
+  display: block;
+  height: 120px;
+  padding: 20px;
+  border-style: none;
+  resize: none;
+  margin: 0 20px;
+}
+
+body label {
+  display: inline;
+  margin-left: 10px;
+}
+
+body input::placedolder {
+  color: #138073;
+}
+
+body input[type=checkbox] {
+  display: inline;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+body button {
+  margin-top: 30px;
+  width: 280px;
+  height: 80px;
+  background-color: #467745;
+  color: #f7e4d7;
+  font-family: 'EB Garamond', serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-style: none;
+  border-radius: 40px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (max-width: 320px) {
+  body button {
+    width: 90vw;
+  }
+}
 /*# sourceMappingURL=style.css.map */
